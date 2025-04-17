@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+/* Basic styling */
+.header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #00b4d8;
+  }
+  
+  .active {
+    color: #00b4d8;
+    border-bottom: 2px solid #00b4d8;
+  }
+  
+  .footer {
+    background: #333;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  
+  .social-links a {
+    color: white;
+    margin-left: 1rem;
+  }
+  
+  main {
+    min-height: calc(100vh - 200px);
+    padding: 2rem;
+  }
