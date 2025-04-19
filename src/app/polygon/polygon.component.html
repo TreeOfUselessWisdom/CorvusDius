@@ -6,9 +6,21 @@
     <title>Users Table</title>
 </head>
 <body>
-
+  <mat-spinner color="Red"></mat-spinner>
+ 
 
     <h2 style="text-align: center;">User Data Table</h2>
+
+    
+
+    <div style="text-align: center; margin-bottom: 20px;">
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery" 
+        placeholder="Search by name..." 
+        style="padding: 5px; width: 200px;"
+      >
+    </div>
     <table>
       <thead>
         <tr>
@@ -20,7 +32,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let User of Users">
+        <tr *ngFor="let User of filteredUsers">
           <td>{{ User.id }}</td>
           <td>{{ User.name }}</td>
           <td>{{ User.email }}</td>

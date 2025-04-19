@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './polygon.component.css'
 })
 export class PolygonComponent {
+  searchQuery: string = '';
+
   Users = [
     { 
       id: 1, 
@@ -44,4 +46,10 @@ export class PolygonComponent {
       image: 'assets/images/F-22 Raptor.jpg' 
     },
   ];
+
+  get filteredUsers() {
+    return this.Users.filter(user =>
+      user.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
+  }
 }
